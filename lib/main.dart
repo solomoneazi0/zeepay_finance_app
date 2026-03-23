@@ -30,7 +30,7 @@ class ZePayApp extends ConsumerWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: themeMode,
-      home: const OnboardScreen(),
+      home: const OnboardingScreen(),
     );
   }
 }
