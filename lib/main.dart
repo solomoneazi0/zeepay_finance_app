@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:zepay_app/providers/theme_providers.dart';
-import 'package:zepay_app/screens/onboardScreens/onboard_screen.dart';
+import 'package:zepay_app/screens/onboardScreens/splash_screen.dart';
 import 'theme/app_theme.dart';
 
 void main() {
@@ -30,7 +30,7 @@ class ZePayApp extends ConsumerWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: themeMode,
-      home: const OnboardingScreen(),
+      home: const SplashScreen(),
     );
   }
 }

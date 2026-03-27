@@ -33,7 +33,7 @@ class _SplashScreenState extends State<SplashScreen> {
     final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return Scaffold(
-      backgroundColor: AppColors.primary,
+      backgroundColor: AppColors.darkBackground,
       body: SafeArea(
         child: Center(
           child: Column(
@@ -46,7 +46,9 @@ class _SplashScreenState extends State<SplashScreen> {
                     width: 90,
                     height: 90,
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: isDark
+                          ? Colors.white.withOpacity(0.15)
+                          : Colors.black.withOpacity(0.15),
                       borderRadius: BorderRadius.circular(24),
                       boxShadow: [
                         BoxShadow(
@@ -75,7 +77,7 @@ class _SplashScreenState extends State<SplashScreen> {
               Text(
                     'ZePay',
                     style: AppTextStyles.h1.copyWith(
-                      color: Colors.white,
+                      color: AppColors.primary,
                       fontSize: 36,
                       letterSpacing: 1.2,
                     ),
@@ -96,8 +98,10 @@ class _SplashScreenState extends State<SplashScreen> {
               Text(
                 'Your everyday super app',
                 style: AppTextStyles.body.copyWith(
-                  color: Colors.white.withOpacity(0.85),
-                  fontSize: 15,
+                  color: isDark
+                      ? Colors.white.withOpacity(0.15).withOpacity(0.85)
+                      : Colors.black.withOpacity(0.15).withOpacity(0.85),
+                  fontSize: 16,
                 ),
               ).animate().fadeIn(delay: 700.ms, duration: 500.ms),
 
@@ -110,10 +114,12 @@ class _SplashScreenState extends State<SplashScreen> {
                     width: 28,
                     height: 28,
                     child: CircularProgressIndicator(
-                      color: Colors.white.withOpacity(0.8),
+                      color: isDark
+                          ? Colors.white.withOpacity(0.15).withOpacity(0.8)
+                          : Colors.black.withOpacity(0.15).withOpacity(0.8),
                       strokeWidth: 2.5,
                     ),
-                  ).animate().fadeIn(delay: 1000.ms, duration: 400.ms),
+                  ).animate().fadeIn(delay: 1000.ms, duration: 700.ms),
 
                   const SizedBox(height: 32),
                 ],

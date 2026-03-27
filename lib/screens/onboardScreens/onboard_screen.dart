@@ -3,7 +3,6 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:zepay_app/constants/app_colors.dart';
 import 'package:zepay_app/constants/app_text_styles.dart';
-import 'package:zepay_app/screens/home/home_screen.dart';
 import 'package:zepay_app/screens/main_screen.dart';
 
 class OnboardingScreen extends StatefulWidget {
