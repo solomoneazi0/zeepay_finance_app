@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:zepay_app/screens/activity_screen.dart';
 import 'package:zepay_app/screens/message_screen.dart';
-import 'package:zepay_app/screens/promo_screen.dart';
+import 'package:zepay_app/screens/promo%20tab/promo_screen.dart';
 import '../widgets/bottom_nav.dart';
 import 'home/home_screen.dart';
 

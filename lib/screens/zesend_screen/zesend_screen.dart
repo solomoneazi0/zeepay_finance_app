@@ -4,6 +4,7 @@ import 'package:flutter_typeahead/flutter_typeahead.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:zepay_app/constants/app_colors.dart';
 import 'package:zepay_app/constants/app_text_styles.dart';
+import 'package:zepay_app/screens/zesend_screen/delivery_details_screen.dart';
 import 'package:zepay_app/services/address_autocomplete_service.dart';
 
 part 'widgets/zesend_widgets.dart';
@@ -77,7 +78,18 @@ class _ZeSendScreenState extends State<ZeSendScreen> {
                     height: 52,
                     width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute<void>(
+                            builder: (_) => ZeSendDeliveryDetailsScreen(
+                              pickupAddress:
+                                  _pickupController.text.trim(),
+                              dropoffAddress:
+                                  _dropoffController.text.trim(),
+                            ),
+                          ),
+                        );
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: AppColors.primary,
                         foregroundColor: Colors.white,
