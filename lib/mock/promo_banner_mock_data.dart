@@ -7,7 +7,7 @@ class PromoBannerMockData {
   static const List<PromoBannerModel> banners = [
     PromoBannerModel(
       id: 'banner_1',
-      image: 'assets/images/promobanner1.png',
+      image: 'assets/images/promobanner11.png',
       title: 'Weekend deal',
       showNewBadge: true,
     ),
